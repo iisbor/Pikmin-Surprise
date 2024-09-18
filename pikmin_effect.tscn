@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bspllu3rahiy4"]
+
+[ext_resource type="AudioStream" uid="uid://bscvl4sqeao24" path="res://Sound Effects/Pikmin sound effect [ ezmp3.cc ].wav" id="1_t2b5y"]
+[ext_resource type="Script" path="res://pikmin_effect.gd" id="1_xcfai"]
+
+[node name="Pikmin Effect" type="Node"]
+script = ExtResource("1_xcfai")
+
+[node name="pikmin_Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_t2b5y")
+autoplay = true
+
+[connection signal="finished" from="pikmin_Sound" to="." method="_on_pikmin_sound_finished"]
