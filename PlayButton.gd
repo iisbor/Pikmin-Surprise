@@ -52,7 +52,7 @@ func pikminPlay():
 	eventManager.add_child(pikminSound)
 	
 func randomGen():
-	var randPick = ranGen.randi_range(1,10000)
+	var randPick = ranGen.randi_range(1,180)
 	if randPick == 1:
 		pikminPlay()
 	
